@@ -10,50 +10,6 @@
 #include<string>
 #include <iomanip>
 
-
-/*
-## Class Date
-Implement a class `Date`. This class must meet the following requirements:
-- it has three **private** attributes to represent day, month and year
-- use a scoped enum for month
-- it has the following **public** functions:
-	- constructor that takes as arguments a day, a month and a year. (Forget about the validation for now)
-	- `day()` function that returns the day
-	- `month()` function that returns the month
-	- `year()` function that returns the year
-	- `add_days(const unsigned int n)` which adds `n` days. You have to take care to increment months and years accordingly (neglect leap years)
-
-*Hints*:
-- you can add more functions, maybe private, to simplify the implementation of the above (e.g., you can implement a function that adds 1 single day)
-- remember to properly mark the member functions that do not modify the class as `const`
-- you should think where to implement the member functions, i.e. inside the class declaration or outside
-
-
-Member functions that are *defined* inside the class are **inlined** meaning that the compiler will replace the function call to its
-implementation (thus the executable becomes bigger). A good rule of thumb is that functions that are simple (e.g. a simple return or few
-lines of code) should be inlined. Bigger functions are recommended to be implemented outside the class. Remember that the name of the
-function is prefixed with the class name (see the implementation of `bar()` above).
-
-- In a switch-case statement you can use several `case` labels for a single case
-```c++
-int a;
-...
-switch (a){
-	case 0: case 2: case 4:
-	case 6: case 8: case 10:
-		std::cout << "a is even\n";
-		break;
-
-	case 1: case 3: case 5:
-	case 7: case 9:
-		std::cout << "a is odd\n";
-		break;
-	default:
-		std::cout << "a > 10\n";
-		break;
-}
-```*/
-
 enum class months{jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec};
 
 class Date{
