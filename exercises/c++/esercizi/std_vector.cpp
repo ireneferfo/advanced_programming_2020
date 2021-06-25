@@ -8,10 +8,18 @@ class Vector {
 
 public:
     Vector(const std::size_t size): elem{new T[size]}, _size{size} {} // constructor 
-    ~Vector() {delete[] elem;} // destructor (release acquired memory)
+    ~Vector() = default; // destructor
 
-    Vector(Vector const&) = delete; // using unique_ptr, delete copy semantics 
-    Vector& operator= (Vector const&) = delete;
+    Vector(Vector const&){
+        // ...
+    }
+
+    Vector& operator= (Vector const& x){
+        elem.reset();
+        auto tmp = x;
+        *this = std::move(tmp);
+        return *this;
+    }
 
     Vector(Vector&& v)noexcept: _size{std::move(v._size)}, elem{std::move(v.elem)};
     Vector& operator=(Vector&& v)noexcept = default; // move semantics
@@ -28,8 +36,14 @@ public:
         Vector res(size);
         for (std::size_t i = 0; i < size; i++)
             res[i] = lhs[i] + rhs[i]; 
-        return res;
+        return std::move(res);
     }
+
+    Vector operator+ (Vector&& lhs, const Vector& rhs){
+        // ...
+        return std::move(lhs);
+    }
+
 };
 
 

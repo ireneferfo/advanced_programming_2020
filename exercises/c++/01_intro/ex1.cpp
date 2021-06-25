@@ -151,14 +151,14 @@ double get_double(){
 }
 
 
-// int main(){
-//     int i = get_int();
-//     std::cout << "I got the variable i = " << i << ", whose size is " << sizeof(i) << std::endl;
-//     std::cin.clear();
-//     double d = get_double();
-//     std::cout << "I got the variable d = " << d << ", whose size is " << sizeof(d) << std::endl;
+int main(){
+    int i = get_int();
+    std::cout << "I got the variable i = " << i << ", whose size is " << sizeof(i) << std::endl;
+    std::cin.clear();
+    double d = get_double();
+    std::cout << "I got the variable d = " << d << ", whose size is " << sizeof(d) << std::endl;
 
-// }
+}
 
 
 

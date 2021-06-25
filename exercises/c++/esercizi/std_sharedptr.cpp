@@ -4,7 +4,7 @@ template <typename T>
 
 class SP{
     T* ptr;
-    int counter{0};
+    int counter{0}; //puntatore o static
 
 public:
     SP(): ptr(nullptr), counter(1) {};

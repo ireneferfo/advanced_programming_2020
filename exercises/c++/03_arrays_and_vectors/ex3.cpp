@@ -50,7 +50,7 @@ template <typename T>
 void transpose(T& a, const int row, const int col){
     if (row == col){
         for (int i = 0; i<row; i++)
-            for (int j = 0; j<col; j++)
+            for (int j = 0; j<i; j++)
                 std::swap(a[i*row + j], a[j*col +i]);      // no funzia
     } else {
         T b{a};

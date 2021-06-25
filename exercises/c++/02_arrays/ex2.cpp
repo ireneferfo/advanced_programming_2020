@@ -29,32 +29,32 @@ Alternatively, compile and link your code with the following flags
 
 template <typename T>
 T* allocate_array(size_t size){
-    return new T[size]; // no mi lascia inizializzarlo con {}
+    return new T[size];
 }
 
 template<typename T>
 void print_reverse(T* array, size_t size){
-    for (size_t i = 0; i< size; ++i){
+    for (size_t i{0}; i< size; ++i){
         std::cout << array[size-i-1] << " ";
     }
 }
 
-// int main(){
-//     size_t size;
+int main(){
+    size_t size;
 
-//     std::cout << "insert size: ";
-//     std::cin >> size;
+    std::cout << "insert size: ";
+    std::cin >> size;
 
-//     int* array = allocate_array<int>(size);
+    int* array = allocate_array<int>(size);
 
-//     std::cout << "insert elements: ";
-//     for(size_t i= 0; i < size; ++i)
-//         std::cin >> array[i];
+    std::cout << "insert elements: ";
+    for(size_t i= 0; i < size; ++i)
+        std::cin >> array[i];
 
-//     print_reverse(array, size);
+    print_reverse(array, size);
 
-//     delete[] array;
-// }
+    // delete[] array;
+}
 
 /*
 ## Prime numbers
@@ -137,9 +137,9 @@ void sieve_eratosthenes(int n){
 }
 
 
-int main(){
-    int n;
-    std::cout << "insert a number: ";
-    std::cin >> n;
-    sieve_eratosthenes(n);
-}
+// int main(){
+//     int n;
+//     std::cout << "insert a number: ";
+//     std::cin >> n;
+//     sieve_eratosthenes(n);
+// }
